@@ -204,6 +204,7 @@ li a:hover:not(.active) {
 }
 
 
+
 .container-home {
   height: 100vh;
   background-image: url(https://www.todofondos.net/wp-content/uploads/1920x1080-Will-Smith-Wallpaper-15-1920-x-1080.jpg);
@@ -231,6 +232,11 @@ li a:hover:not(.active) {
   
 }
 
+.galeria {
+  margin-top: 80px;
+  align-items: center;
+}
+
 .imagenesP img{
   width: 300px;
 }
@@ -244,11 +250,10 @@ li a:hover:not(.active) {
   box-sizing: border-box;
 }
 
-.imagen img{
+.imagen-wiki img{
+  margin: auto;
   width: 250px;
   display: flex;
-  justify-content: center;
-  
 }
 
 .willS img{
