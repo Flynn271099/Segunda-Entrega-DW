@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* box sizing = Lo que hace esta propiedad es definir como se calcula el alto y ancho de un elemento */
+    /* Con border box especificamos que las cajas mantengan su ancho y su alto */
+    box-sizing: border-box;
+}
+
+.nav-bar{
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(29, 23, 23, 0.722);
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.list {
+  float: left;
+}
+
+.container-info{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.container-info-textos{
+  width: 30%;
+  display: flex;
+  margin: 45px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.text {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+
+.pie-pagina {
+  width: 100%;
+  background-color: rgba(29, 23, 23, 0.722);
+}
+.pie-pagina .grupo-1{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.pie-pagina .grupo-1 .box figure img{
+  width: 300px;
+}
+.pie-pagina .grupo-1 .box h2{
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+  color: #efefef;
+  margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .sitios a{
+  display: inline-block;
+  text-decoration: none;
+  width: 60px;
+  height: 35px;
+  line-height: 35px;
+  color: #fff;
+  margin-right: 10px;
+  text-align: center;
+  transition: all 300ms ease;
+}
+.pie-pagina .grupo-2{
+  background-color: rgba(30, 24, 24, 0.722);
+  padding: 15px 10px;
+  color: #fff;
+  text-align: center;
+}
+.pie-pagina .grupo-2 small{
+  font-size: 15px;
+}
+
+@media screen and (max-width:800px){
+  .pie-pagina .grupo-1{
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+  }
+}
+
+
+.container-home {
+  height: 100vh;
+  background-image: url(https://www.todofondos.net/wp-content/uploads/1920x1080-Will-Smith-Wallpaper-15-1920-x-1080.jpg);
+  background-repeat: no-repeat;
+}
+
+
+@media screen and (max-width:425px) {
+  .container-home{
+    height: 75vh;
+  }
+  .nav-bar li{
+    display: none;
+  }
+  .nav-bar .list{
+    display: block;
+  }
+  #navbarNavDarkDropdown{
+    display: block;
+    justify-content: right;
+    margin: 5px 15px 15px 20px;
+  }
+}
+
+@media screen and (min-width:426px) {
+  #navbarNavDarkDropdown{
+    display: none;
+  }
+  
+}
+
+@media screen and (max-width:1110px) {
+  .container-info{
+    justify-content: left;
+  }
+  
+}
+
+.imagenesP img{
+  width: 300px;
+}
+
+.imagenes img{
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-style: none;
+  box-sizing: border-box;
+}
+
+.imagen img{
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.willS img{
+  margin-left: 1000px;
+  margin-bottom: 200px;
+}
+
+.container-form{
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  margin-top: 90px;
+  margin-bottom: 15px;
+}
+
+.container-form h2{
+  margin-bottom: 15px;
+  font-size: 35px;
+}
+.container-form p{
+ font-size: 17px;
+ line-height: 1.6;
+ margin-bottom: 30px; 
+}
+.container-form a{
+  font-size: 17px;
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  margin-bottom: 15px;
+  color: black;
+  font-weight: 700;
+}
+.container-form a i{
+  color: rgba(28, 23, 23, 0.722);
+  margin-right: 10px;
+}
+.container-form form .campo, textarea{
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 15px;
+  border: 1px solid #dbdbdb;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  outline: 0px;
+}
+.container-form form textarea{
+  max-width: 530px;
+  min-width: 530px;
+  min-height: 140px;
+  max-height: 150px;
+}
+.container-form .btn-enviar{
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  outline: 0px;
+  background: rgba(16, 12, 12, 0.722);
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+.container-form .btn-enviar:hover{
+  background: rgba(9, 8, 8, 0.722);
+}
