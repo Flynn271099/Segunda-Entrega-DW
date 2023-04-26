@@ -6,33 +6,111 @@
     box-sizing: border-box;
 }
 
-.nav-bar{
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Poppins&family=Roboto+Condensed:wght@300&display=swap');
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
+  box-sizing: inherit;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: rgba(29, 23, 23, 0.722);
+
+body{
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-li {
-  float: right;
+.header{
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(1, 1, 1, 0.7);
+  padding: 0px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+.logo{
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
 }
 
-.list {
+.navigation ul {
+  
+  list-style: none;
+
+}
+
+.header .navigation ul li{
+
   float: left;
+  position: relative;
+
+}
+
+.header .navigation ul li a{
+  font-size: 18px;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px;
+  display: block;
+  transition: all .2s ease;
+}
+
+.header .navigation ul li a:hover{
+  background-color: #685cfe;
+}
+
+#toggle,
+.header label{
+  display: none;
+  cursor: pointer;
+}
+
+.home{
+  width: 45px;
+  height: 35px;
+}
+
+@media(max-width:950px){
+  .header label {
+    display: initial;
+  }
+
+  .header{
+    padding: 20px 10%; 
+  }
+
+  .header .navigation{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(1, 1, 1, 0.7);
+    display: none;
+  }
+
+  .header .navigation ul li {
+    width: 100%;
+  }
+
+  .header .navigation ul li a{
+    padding: 8px 30px 8px 10%;
+  }
+
+  #toggle:checked ~ .navigation {
+    display: block;
+  }
 }
 
 .container-info{
@@ -44,7 +122,7 @@ li a {
 .container-info-textos{
   width: 30%;
   display: flex;
-  margin: 45px;
+  margin: 75px;
   flex-direction: column;
   gap: 20px;
 }
@@ -137,29 +215,18 @@ li a:hover:not(.active) {
   .container-home{
     height: 75vh;
   }
-  .nav-bar li{
-    display: none;
+  .container-form{
+    flex-direction: column;
   }
-  .nav-bar .list{
-    display: block;
-  }
-  #navbarNavDarkDropdown{
-    display: block;
-    justify-content: right;
-    margin: 5px 15px 15px 20px;
-  }
-}
-
-@media screen and (min-width:426px) {
-  #navbarNavDarkDropdown{
-    display: none;
-  }
-  
 }
 
 @media screen and (max-width:1110px) {
   .container-info{
+    margin: 30px;
+    padding: 0;
     justify-content: left;
+    align-items: center;
+    font-size: 11px;
   }
   
 }
